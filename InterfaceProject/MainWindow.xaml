@@ -1,0 +1,165 @@
+﻿<Window x:Class="InterfaceProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InterfaceProject"
+        mc:Ignorable="d"
+        Title="Wavelet" Height="423.318" Width="564.386"
+        MinHeight="600" MinWidth="900">
+    <Grid ShowGridLines="False" Background="#FF404040">
+        <Grid.ColumnDefinitions>
+            <!-- Столбец, в которой будет блок с загрузкой картинок и входными параметрами -->
+            <ColumnDefinition Width="*" MinWidth="390"/>
+            <!-- Столбец для GridSpan-->
+            <ColumnDefinition Width="Auto" />
+            <!-- Столбец, в которой будет блок с результатом работы и процессом выполнения -->
+            <ColumnDefinition Width="1.35*" MinWidth="250"/>
+        </Grid.ColumnDefinitions>
+
+        <GridSplitter Grid.Column="1"  Grid.Row="0" ShowsPreview="False" Width="5"
+                      HorizontalAlignment="Center" VerticalAlignment="Stretch" Background="#FF404040" />
+
+        <Grid ShowGridLines="False" Margin="10 10 0 10" Background="#FFC3C2C2">
+            <Grid.RowDefinitions >
+                <!--Строка, в которой будет блок с загрузкой картинок-->
+                <RowDefinition Height="*" MinHeight="240"/>
+                <!-- Строка для GridSpan-->
+                <RowDefinition Height="Auto" />
+                <!--Строка, в которой будет блок с входными параметрами-->
+                <RowDefinition Height="2*" MinHeight="240" />
+            </Grid.RowDefinitions>
+
+            <GridSplitter Grid.Row="1" ShowsPreview="False" Height="5" 
+                          HorizontalAlignment="Stretch" VerticalAlignment="Center" Background="#FF404040"/>
+            <ListBox x:Name="ImageListBox" Margin="0,30,6,60" HorizontalAlignment="Right" Width="159" Background="#FF5D5D5D" Foreground="White"/>
+            <Button Content="Загрузить" HorizontalAlignment="Right" Margin="0,0,72,35" VerticalAlignment="Bottom" Width="93" Background="#FFFBE4A6"/>
+            <Button Content="Очистить" HorizontalAlignment="Right" Margin="0,0,72,10" VerticalAlignment="Bottom" Width="93"/>
+            <Viewbox Margin="10,30,170,10" Stretch="Uniform" MinHeight="200" MinWidth="200">
+                <Canvas Height="101" Width="100">
+                    <Canvas.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                            <GradientStop Color="Black" Offset="0.861"/>
+                            <GradientStop Color="White"/>
+                            <GradientStop Color="#FF474747" Offset="0.587"/>
+                        </LinearGradientBrush>
+                    </Canvas.Background>
+                </Canvas>
+
+            </Viewbox>
+            <Button Content="Удалить" Margin="0,0,6,35" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="61"/>
+            <Button Content="Тык" Margin="0,0,6,10" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="61"/>
+            <Label Content="Исходные данные" HorizontalAlignment="Left" Margin="10,2,0,0" VerticalAlignment="Top" Width="208" FontSize="14" FontWeight="Bold" Height="26"/>
+            <Grid Grid.Row="2" HorizontalAlignment="Right" Width="107">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="76*"/>
+                    <RowDefinition Height="39*"/>
+                    <RowDefinition Height="55*"/>
+                    <RowDefinition Height="32*"/>
+                    <RowDefinition Height="16*"/>
+                    <RowDefinition Height="44*"/>
+                    <RowDefinition Height="42*"/>
+                </Grid.RowDefinitions>
+                <Button Content="Загрузить" Margin="10,0" Grid.Row="1" VerticalAlignment="Top" Height="20"/>
+                <Button Content="Сохранить" Margin="10,0" Grid.Row="3" VerticalAlignment="Top" Height="20"/>
+                <Button Content="Очистить" Margin="10,0" Grid.Row="6" VerticalAlignment="Top" Height="20"/>
+                <Label Margin="10,0,0,22" Content="Очистить поля" Grid.Row="5" Grid.RowSpan="2"/>
+                <TextBlock Margin="10,10,0,0" TextWrapping="Wrap" Text="Загрузить сохраненные параметры" />
+                <TextBlock Margin="10,0,0,12" Grid.Row="2" TextWrapping="Wrap" Text="Сохранить параметры" Grid.RowSpan="2"/>
+
+            </Grid>
+
+            <Grid Grid.Row="2" Margin="0,0,112,0">
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="34*"/>
+                    <RowDefinition Height="35*"/>
+                    <RowDefinition Height="95*"/>
+                    <RowDefinition Height="3"/>
+                    <RowDefinition Height="31*"/>
+                    <RowDefinition Height="36*"/>
+                    <RowDefinition Height="33*"/>
+                    <RowDefinition Height="35*"/>
+                </Grid.RowDefinitions >
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="89*"/>
+                    <ColumnDefinition Width="90*"/>
+                    <ColumnDefinition Width="85*"/>
+                    <ColumnDefinition Width="3"/>
+                </Grid.ColumnDefinitions>
+
+                <Canvas Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Margin="10,5,8,10" Background="White"/>
+
+
+                <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Content="Входные параметры" 
+                       Margin="10,5,48,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Height="26"/>
+                <TextBox Grid.ColumnSpan="2" Margin="10,0,10,5" Grid.Row="5" 
+                         TextWrapping="Wrap"/>
+                <TextBox Margin="10,0,10,10" Grid.Row="7" TextWrapping="Wrap"/>
+                <TextBox Margin="10,0,10,10" Grid.Row="7" TextWrapping="Wrap" Grid.Column="1"/>
+                <Label Content="Вид фукнции" Margin="10,2,8,0" Grid.Row="1" Grid.ColumnSpan="3"/>
+                <Label Content="Какой-то парметр" Margin="10,0" Grid.Row="4" Grid.ColumnSpan="2"/>
+                <Label Content="Параметр2" Margin="10,0,5,0" Grid.Row="6"/>
+                <Label Content="Параметр2" Margin="10,0,5,0" Grid.Row="6" Grid.Column="1"/>
+                <Grid Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="2">
+                    <RadioButton Content="Выбор А" VerticalAlignment="Top" Margin="0,0,4,0"/>
+                    <RadioButton Content="Выбор Б" Margin="0,0,4,0" Height="15" VerticalAlignment="Bottom"/>
+                </Grid>
+                <Label Content="Тип" Margin="10,0,2,0" Grid.Row="4" Grid.Column="2"/>
+                <Rectangle Grid.ColumnSpan="3" Fill="#FF6E6E6E" Margin="10,0,8,0" Grid.Row="3" Stroke="White"/>
+                <Rectangle Grid.Column="3" Fill="#FF6E6E6E" Margin="0,10" Grid.RowSpan="8" Stroke="White"/>
+            </Grid>
+
+        </Grid>
+
+        <Grid ShowGridLines="False" Margin="0,10,10,10" Grid.Column="2" Background="#FFC3C2C2">
+            <Grid.RowDefinitions >
+                <!--Строка, в которой будет блок с результатом работы-->
+                <RowDefinition Height="2.8*" MinHeight="250" />
+                <!-- Строка для GridSpan-->
+                <RowDefinition Height="Auto" />
+                <!--Строка, в которой будет блок с процессом выполнения-->
+                <RowDefinition Height="*" MinHeight="100"/>
+            </Grid.RowDefinitions>
+
+            <GridSplitter Grid.Column="0" Grid.Row="1" ShowsPreview="False" Height="5" 
+                          HorizontalAlignment="Stretch" VerticalAlignment="Center" Background="#FF404040"/>
+
+            <Grid Margin="10,10,10,80">
+                <TabControl Margin="10,33,10,10">
+                    <TabItem Header="Вид 1">
+                        <Grid>
+                            <Grid.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="White" Offset="0"/>
+                                    <GradientStop Color="#FFF7E9D1" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Grid.Background>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Header="Вид 2">
+                        <Grid>
+                            <Grid.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FFE8DFC7" Offset="0"/>
+                                    <GradientStop Color="White" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Grid.Background>
+                        </Grid>
+                    </TabItem>
+                </TabControl>
+                <Label Content="Результаты" HorizontalAlignment="Left" Margin="10,2,0,0" VerticalAlignment="Top" Width="208" FontSize="14" FontWeight="Bold" Height="26"/>
+            </Grid>
+            <Grid Margin="10,0,10,10" MaxHeight="80" MinHeight="65" VerticalAlignment="Bottom">
+                <Button Content="Решить"  HorizontalAlignment="Left" Margin="10,31,0,0" VerticalAlignment="Top" Width="109" Height="31" Background="#FFF9C741"/>
+                <Button Content="Сохранить" Margin="0,31,10,18" HorizontalAlignment="Right" Width="91"/>
+                <Label Content="Созранить результаты" VerticalAlignment="Top" HorizontalAlignment="Right" Width="137" Margin="0,0,2,0"/>
+                <Label Content="Создать сетку по исходным данным" HorizontalAlignment="Left" Margin="10,2,0,52" Width="208"/>
+            </Grid>
+            <TextBox Margin="10,41,10,10" Grid.Row="2" TextWrapping="Wrap" Text="&gt; Программа запустилась. Успех" Background="#FF2E2E2E" Foreground="White"/>
+            <Label Content="Состояние работы" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="208" FontSize="14" FontWeight="Bold" Height="26" Grid.Row="2"/>
+
+        </Grid>
+
+    </Grid>
+</Window>

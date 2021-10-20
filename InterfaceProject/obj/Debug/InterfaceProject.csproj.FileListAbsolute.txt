@@ -1,0 +1,15 @@
+C:\Users\egshh\source\repos\InterfaceProject\InterfaceProject\obj\Debug\InterfaceProject.csprojAssemblyReference.cache
+C:\Users\egshh\source\repos\InterfaceProject\InterfaceProject\obj\Debug\MainWindow.g.cs
+C:\Users\egshh\source\repos\InterfaceProject\InterfaceProject\obj\Debug\App.g.cs
+C:\Users\egshh\source\repos\InterfaceProject\InterfaceProject\obj\Debug\InterfaceProject_MarkupCompile.cache
+C:\Users\egshh\source\repos\InterfaceProject\InterfaceProject\obj\Debug\InterfaceProject_MarkupCompile.lref
+C:\Users\egshh\source\repos\InterfaceProject\InterfaceProject\bin\Debug\InterfaceProject.exe.config
+C:\Users\egshh\source\repos\InterfaceProject\InterfaceProject\bin\Debug\InterfaceProject.exe
+C:\Users\egshh\source\repos\InterfaceProject\InterfaceProject\bin\Debug\InterfaceProject.pdb
+C:\Users\egshh\source\repos\InterfaceProject\InterfaceProject\obj\Debug\MainWindow.baml
+C:\Users\egshh\source\repos\InterfaceProject\InterfaceProject\obj\Debug\InterfaceProject.g.resources
+C:\Users\egshh\source\repos\InterfaceProject\InterfaceProject\obj\Debug\InterfaceProject.Properties.Resources.resources
+C:\Users\egshh\source\repos\InterfaceProject\InterfaceProject\obj\Debug\InterfaceProject.csproj.GenerateResource.cache
+C:\Users\egshh\source\repos\InterfaceProject\InterfaceProject\obj\Debug\InterfaceProject.csproj.CoreCompileInputs.cache
+C:\Users\egshh\source\repos\InterfaceProject\InterfaceProject\obj\Debug\InterfaceProject.exe
+C:\Users\egshh\source\repos\InterfaceProject\InterfaceProject\obj\Debug\InterfaceProject.pdb
