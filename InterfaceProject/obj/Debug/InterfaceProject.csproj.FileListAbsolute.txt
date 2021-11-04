@@ -13,3 +13,13 @@ C:\Users\egshh\source\repos\InterfaceProject\InterfaceProject\obj\Debug\Interfac
 C:\Users\egshh\source\repos\InterfaceProject\InterfaceProject\obj\Debug\InterfaceProject.csproj.CoreCompileInputs.cache
 C:\Users\egshh\source\repos\InterfaceProject\InterfaceProject\obj\Debug\InterfaceProject.exe
 C:\Users\egshh\source\repos\InterfaceProject\InterfaceProject\obj\Debug\InterfaceProject.pdb
+C:\Users\egshh\source\repos\InterfaceProject\InterfaceProject\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\egshh\source\repos\InterfaceProject\InterfaceProject\bin\Debug\Prism.dll
+C:\Users\egshh\source\repos\InterfaceProject\InterfaceProject\bin\Debug\Prism.Wpf.dll
+C:\Users\egshh\source\repos\InterfaceProject\InterfaceProject\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\egshh\source\repos\InterfaceProject\InterfaceProject\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\egshh\source\repos\InterfaceProject\InterfaceProject\bin\Debug\Prism.pdb
+C:\Users\egshh\source\repos\InterfaceProject\InterfaceProject\bin\Debug\Prism.xml
+C:\Users\egshh\source\repos\InterfaceProject\InterfaceProject\bin\Debug\Prism.Wpf.pdb
+C:\Users\egshh\source\repos\InterfaceProject\InterfaceProject\bin\Debug\Prism.Wpf.xml
+C:\Users\egshh\source\repos\InterfaceProject\InterfaceProject\obj\Debug\InterfaceProject.csproj.CopyComplete

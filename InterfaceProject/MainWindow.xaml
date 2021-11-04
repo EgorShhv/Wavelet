@@ -32,22 +32,13 @@
 
             <GridSplitter Grid.Row="1" ShowsPreview="False" Height="5" 
                           HorizontalAlignment="Stretch" VerticalAlignment="Center" Background="#FF404040"/>
-            <ListBox x:Name="ImageListBox" Margin="0,30,6,60" HorizontalAlignment="Right" Width="159" Background="#FF5D5D5D" Foreground="White"/>
-            <Button Content="Загрузить" HorizontalAlignment="Right" Margin="0,0,72,35" VerticalAlignment="Bottom" Width="93" Background="#FFFBE4A6"/>
-            <Button Content="Очистить" HorizontalAlignment="Right" Margin="0,0,72,10" VerticalAlignment="Bottom" Width="93"/>
-            <Viewbox Margin="10,30,170,10" Stretch="Uniform" MinHeight="200" MinWidth="200">
-                <Canvas Height="101" Width="100">
-                    <Canvas.Background>
-                        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                            <GradientStop Color="Black" Offset="0.861"/>
-                            <GradientStop Color="White"/>
-                            <GradientStop Color="#FF474747" Offset="0.587"/>
-                        </LinearGradientBrush>
-                    </Canvas.Background>
-                </Canvas>
+            <ListBox x:Name="ImageListBox" Margin="0,30,4,60" HorizontalAlignment="Right" Width="159" Background="#FF5D5D5D" Foreground="White" SelectionChanged="ImageListBox_SelectionChanged"/>
+            <Button Content="Загрузить" HorizontalAlignment="Right" Margin="0,0,72,35" VerticalAlignment="Bottom" Width="93" Background="#FFFBE4A6" Click="Button_Click"/>
+            <Button Content="Очистить" HorizontalAlignment="Right" Margin="0,0,72,10" VerticalAlignment="Bottom" Width="93" Click="Button_Click_2"/>
 
-            </Viewbox>
-            <Button Content="Удалить" Margin="0,0,6,35" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="61"/>
+            <Image x:Name="CurrentImage" Source="D:\Desktop\Концепты\1571467977147511902.jpg" Margin="10,30,170,10" Stretch="Uniform" MinHeight="200" MinWidth="200"/>
+
+            <Button Content="Удалить" Margin="0,0,6,35" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="61" Click="Button_Click_1"/>
             <Button Content="Тык" Margin="0,0,6,10" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="61"/>
             <Label Content="Исходные данные" HorizontalAlignment="Left" Margin="10,2,0,0" VerticalAlignment="Top" Width="208" FontSize="14" FontWeight="Bold" Height="26"/>
             <Grid Grid.Row="2" HorizontalAlignment="Right" Width="107">
@@ -156,7 +147,7 @@
                 <Label Content="Созранить результаты" VerticalAlignment="Top" HorizontalAlignment="Right" Width="137" Margin="0,0,2,0"/>
                 <Label Content="Создать сетку по исходным данным" HorizontalAlignment="Left" Margin="10,2,0,52" Width="208"/>
             </Grid>
-            <TextBox Margin="10,41,10,10" Grid.Row="2" TextWrapping="Wrap" Text="&gt; Программа запустилась. Успех" Background="#FF2E2E2E" Foreground="White"/>
+            <TextBox x:Name="ProgressConsole" Margin="10,41,10,10" Grid.Row="2" TextWrapping="Wrap" Text="&gt; Программа запустилась. Успех" Background="#FF2E2E2E" Foreground="White"/>
             <Label Content="Состояние работы" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="208" FontSize="14" FontWeight="Bold" Height="26" Grid.Row="2"/>
 
         </Grid>
