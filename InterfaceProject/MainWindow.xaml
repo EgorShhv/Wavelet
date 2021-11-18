@@ -4,8 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:InterfaceProject"
+        xmlns:opentk="clr-namespace:OpenTK;assembly=OpenTK.GLControl"
         mc:Ignorable="d"
-        Title="Wavelet" Height="423.318" Width="564.386"
+        Title="Wavelet" Height="683" Width="1026"
         MinHeight="600" MinWidth="900">
     <Grid ShowGridLines="False" Background="#FF404040">
         <Grid.ColumnDefinitions>
@@ -34,11 +35,11 @@
                           HorizontalAlignment="Stretch" VerticalAlignment="Center" Background="#FF404040"/>
             <ListBox x:Name="ImageListBox" Margin="0,30,4,60" HorizontalAlignment="Right" Width="159" Background="#FF5D5D5D" Foreground="White" SelectionChanged="ImageListBox_SelectionChanged"/>
             <Button Content="Загрузить" HorizontalAlignment="Right" Margin="0,0,72,35" VerticalAlignment="Bottom" Width="93" Background="#FFFBE4A6" Click="Button_Click"/>
-            <Button Content="Очистить" HorizontalAlignment="Right" Margin="0,0,72,10" VerticalAlignment="Bottom" Width="93" Click="Button_Click_2"/>
+            <Button x:Name="ClearImages" Content="Очистить" HorizontalAlignment="Right" Margin="0,0,72,10" VerticalAlignment="Bottom" Width="93" Click="Button_Click_2"/>
 
-            <Image x:Name="CurrentImage" Source="D:\Desktop\Концепты\1571467977147511902.jpg" Margin="10,30,170,10" Stretch="Uniform" MinHeight="200" MinWidth="200"/>
+            <Image x:Name="CurrentImage" Margin="10,30,170,10" Stretch="Uniform" MinHeight="200" MinWidth="200"/>
 
-            <Button Content="Удалить" Margin="0,0,6,35" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="61" Click="Button_Click_1"/>
+            <Button x:Name="DeleteImage" Content="Удалить" Margin="0,0,6,35" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="61" Click="Button_Click_1"/>
             <Button Content="Тык" Margin="0,0,6,10" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="61"/>
             <Label Content="Исходные данные" HorizontalAlignment="Left" Margin="10,2,0,0" VerticalAlignment="Top" Width="208" FontSize="14" FontWeight="Bold" Height="26"/>
             <Grid Grid.Row="2" HorizontalAlignment="Right" Width="107">
@@ -117,15 +118,26 @@
                           HorizontalAlignment="Stretch" VerticalAlignment="Center" Background="#FF404040"/>
 
             <Grid Margin="10,10,10,80">
-                <TabControl Margin="10,33,10,10">
+                <TabControl Margin="10,33,10,0">
                     <TabItem Header="Вид 1">
                         <Grid>
-                            <Grid.Background>
+                            <!--<Grid.Background>
                                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                     <GradientStop Color="White" Offset="0"/>
                                     <GradientStop Color="#FFF7E9D1" Offset="1"/>
                                 </LinearGradientBrush>
-                            </Grid.Background>
+                            </Grid.Background>-->
+                            <!--<Grid.RowDefinitions >
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>-->
+                            <WindowsFormsHost Initialized="WindowsFormsHost_Initialized">
+                                <opentk:GLControl x:Name="glControl" Load="glControl_Load" Paint="glControl_Paint" KeyDown="glControl_KeyDown" MouseWheel="glControl_MouseWheel"/>
+                            </WindowsFormsHost>                            
                         </Grid>
                     </TabItem>
                     <TabItem Header="Вид 2">
@@ -143,9 +155,7 @@
             </Grid>
             <Grid Margin="10,0,10,10" MaxHeight="80" MinHeight="65" VerticalAlignment="Bottom">
                 <Button Content="Решить"  HorizontalAlignment="Left" Margin="10,31,0,0" VerticalAlignment="Top" Width="109" Height="31" Background="#FFF9C741"/>
-                <Button Content="Сохранить" Margin="0,31,10,18" HorizontalAlignment="Right" Width="91"/>
-                <Label Content="Созранить результаты" VerticalAlignment="Top" HorizontalAlignment="Right" Width="137" Margin="0,0,2,0"/>
-                <Label Content="Создать сетку по исходным данным" HorizontalAlignment="Left" Margin="10,2,0,52" Width="208"/>
+                <Button Content="Сохранить" Margin="0,31,320,18" HorizontalAlignment="Right" Width="91" RenderTransformOrigin="-1.44,0.323"/>
             </Grid>
             <TextBox x:Name="ProgressConsole" Margin="10,41,10,10" Grid.Row="2" TextWrapping="Wrap" Text="&gt; Программа запустилась. Успех" Background="#FF2E2E2E" Foreground="White"/>
             <Label Content="Состояние работы" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="208" FontSize="14" FontWeight="Bold" Height="26" Grid.Row="2"/>
